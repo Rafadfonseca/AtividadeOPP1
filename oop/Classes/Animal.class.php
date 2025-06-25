@@ -12,22 +12,24 @@ class Animal{
         public $chipado;
 
         public function exibirFicha() : string {
-            return "Olá, meu nome é {$this->nome} e tenho {$this->idade} anos  <br> ";
+            return "O nome do animal é {$this->nome} e tem {$this->idade} anos  <br> ";
         }           
-        public function atualizarPeso() : string {
-            return "O peso do {$this->nome} é {$this->peso}Kg  <br> ";
+        public function atualizarPeso($peso) : string {
+            $this->peso = $peso
+            return "O peso do {$this->nome} é: {$this->peso}Kg  <br> ";
         }       
-        public function verificarStatus() : string {
-            return "Status: {$this->status}  <br> ";
+        public function alterarStatus() : string {
+            $this->peso = $novoStatus
+            return "O status do {$this->nome} é:  {$this->status}  <br> ";
         }       
         public function verificarIdade() : string {
             
             if ($this->idade <= 7) {
-                return "Jovem";
+                return "A fase do {$this->nome} é:  Jovem";
             } elseif ($this->idade >= 8 && $this->idade <= 9) {
-                return "Adulto";
+                return "A fase do {$this->nome} é:  Adulto";
             } else {
-                return "Idoso";
+                return "A fase do {$this->nome} é:  Idoso";
             }
         }         
         public function marcarComoChipado() : string {
