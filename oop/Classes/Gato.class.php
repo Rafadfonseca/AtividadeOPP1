@@ -1,5 +1,4 @@
 <?php
-
 class Gato{
 
         public $nome;
@@ -11,9 +10,31 @@ class Gato{
         public $contatoHumano;
         public $usaCaixaAreia;
 
+
+        public function __construct($nome, $idade, $sexo, $peso, $cor, $pelagem, $castrado = false, $independente = 5, $vacinado = false, $curioso = false, $adoraColo = false, $usaCaixaAreia = false){
+            $this->nome = $nome;
+            $this->especie = "Gato";
+            $this->idade = $idade;
+            $this->sexo = $sexo;
+            $this->peso = $peso;
+            $this->cor = $cor;
+            $this->status = "Disponivel";
+            $this->chipado = false;
+            $this->pelagem = $pelagem;
+            $this->castrado = $castrado;
+            $this->independente = $independente;
+            $this->vacinado = $vacinado;
+            $this->curioso = $curioso;
+            $this->adoraColo = $adoraColo;
+            $this->usaCaixaAreia = $usaCaixaAreia;
+        }
+
+
         public function exibirGato() : string {
             return "Olá, meu nome é {$this->nome} e minha pelagem é {$this->pelagem}  <br> ";
         }   
+
+        
         public function castrar() : string {
             if ( strtolower($this->castrado) === "sim") {
                 return "Gato castrado";
@@ -25,7 +46,7 @@ class Gato{
             return "A pelagem é {$this->pelagem} ";
         }       
         public function atualizarIndependencia() : string {
-            return "O nível de idependencia do gato é {$this->independente} de 10 ";
+            return "O nível de idependencia do this é {$this->independente} de 10 ";
         }   
         public function vacinar() : string {
             if ( strtolower($this->vacinado) === "sim") {

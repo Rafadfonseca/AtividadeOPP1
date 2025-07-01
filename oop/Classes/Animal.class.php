@@ -11,6 +11,7 @@ class Animal{
         public $status;
         public $chipado;
 
+
         public function exibirFicha() : string {
             return "O nome do animal é {$this->nome} e tem {$this->idade} anos  <br> ";
         }           

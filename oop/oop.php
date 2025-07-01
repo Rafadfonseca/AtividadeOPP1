@@ -1,5 +1,10 @@
 <?php
 
+include_once './Classes/Gato.class.php';
+
+$objGato = new Gato("Nigiri", 2, "Macho", 4, "amarelo", "curto");
+echo $objGato->exibirGato();
+exit();
 include_once './Classes/Animal.class.php';
 $animal = new Animal();
 $animal->nome = 'Shoyu';
@@ -37,6 +42,8 @@ echo $cachorro->indicarPorte();
 echo $cachorro->socializar(). "<br> <br>";
 echo $cachorro->resumoCachorro();
 
+
+/*/
 include_once './Classes/Gato.class.php';
 $gato = new Gato();
 $gato->nome = 'Nigiri';
@@ -55,6 +62,7 @@ echo $gato->vacinar(). "<br>";
 echo $gato-> ensinarCaixaAreia(). "<br>" ;
 echo $gato->verificarContato(). "<br>". "<br>";
 echo $gato->resumoGato();
+/*/
 
 include_once './Classes/Adotante.class.php';
 $adotante = new Adotante();
